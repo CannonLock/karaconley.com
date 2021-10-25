@@ -13,16 +13,51 @@ body {
     width: 100%;
 }
 
-#balloons {
+#text {
+    font-family: 'Irish Grover', cursive;
+    color: #ffffff00;
+    z-index: 98;
+    height: 100vh;
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    animation-delay: 6s;
+    animation-timing-function: ease-out;
+    animation-name: show-text;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#text h1 {
+    font-size: 90px;
+}
+
+#balloons {
+    max-width: 100vw;
+    z-index: 99;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     height: 100vh;
     animation-name: rise-balloons;
     animation-duration: 8s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 /* The animation code */
 @keyframes rise-balloons {
     from {margin-top: 200vh;}
     to {margin-top: -100vh;}
+}
+
+/* The animation code */
+@keyframes show-text {
+    from {color: #ffffff00}
+    to {color: #000000}
 }
