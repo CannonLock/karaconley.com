@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#kara {
+    height: 100vh;
+    width: 100%;
+}
+
+#balloons {
+    position: absolute;
+    height: 100vh;
+    animation-name: rise-balloons;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes rise-balloons {
+    from {margin-top: 200vh;}
+    to {margin-top: -100vh;}
+}
